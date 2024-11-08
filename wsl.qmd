@@ -1,0 +1,8 @@
+
+## Introduccion
+
+Aqui la introduccion
+
+{{< include wsl/_wsl_intro.qmd >}}
+
+{{< include wsl/_wsl_windows.qmd >}}
