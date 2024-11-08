@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "wsl",
+    "section": "",
+    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "wsl.html",
+    "href": "wsl.html",
+    "title": "Grandez",
+    "section": "",
+    "text": "Aqui la introduccion"
+  },
+  {
+    "objectID": "wsl.html#intro-33",
+    "href": "wsl.html#intro-33",
+    "title": "Grandez",
+    "section": "Intro 33",
+    "text": "Intro 33\ndocumento con la introduccion"
+  },
+  {
+    "objectID": "wsl.html#windows-1",
+    "href": "wsl.html#windows-1",
+    "title": "Grandez",
+    "section": "Windows 1",
+    "text": "Windows 1\nAqui los datos para windows"
+  }
+]
