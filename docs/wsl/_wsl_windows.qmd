@@ -1,0 +1,41 @@
+## Windows 1
+Aqui los datos para windows
+
+### Estructura Host
+
+### Prerequisitos
+
+
+#### WSL
+
+Logicamente, tener habilitado El subsistema Linux de Windows
+
+#### Una GPU virtual
+
+::: {.img-float}
+![](graphics_001.jpg){style="float: left; max-width=25%"}
+
+
+Para las aplicacions gráficas necesitaremos un servidor X, el cual a su vez necesita una GPU virtual.
+Esta GPU es dependiente del procesador por lo que hay que instalar la correspondiente a cada uno
+
+- [Intel](https://www.intel.com/content/www/us/en/download/19344/intel-graphics-windows-dch-drivers.html)
+- [AMD](https://www.amd.com/en/support)
+- [NVidia](https://www.nvidia.com/Download/index.aspx?lang=en-us)
+- [Virtual X Server](https://vcxsrv.com/)
+
+:::
+
+#### Estructura
+
+
+#### Scripts y utilidades
+
+Por ultimo, obtendremos el conjunto de scripts y utilidades que nos ayudarán a hacer las tareas mas automáticas y repetibles.
+
+Para ello, y asumiendo la estructura organizativa propuesta, nos posicionaremos en el directorio compartido: `M:\shared` y nos descargaremos estas utilidades de github:
+
+- *HTTPS*: `https://github.com/Grandez/wsl_tools.git`
+- *SSL*: `git@github.com:Grandez/wsl_tools.git`
+- *CLI*: `gh repo clone Grandez/wsl_tools`
+

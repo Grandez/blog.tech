@@ -1,9 +1,1 @@
----
-title: "About"
----
-
-About this site
-
-```{r}
-1 + 1
-```
+![Myself](images/piter_pank_02.jpg) **Informatico en excedencia**

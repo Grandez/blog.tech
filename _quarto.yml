@@ -4,13 +4,35 @@ project:
 website:
   title: "Grandez"
   navbar:
+    background: light
+    logo: images/buho.png
+    logo-alt: "Serendipias"
+    title: false
+    collapse-below: lg  
     search: true
     left:
       - href: index.qmd
         text: Home
       - href: wsl.qmd
         text: WSL
-      - about.qmd
+      - href: docs/poc/poc.qmd
+        text: Poc
+      - href: about.qmd
+        text: About
+  sidebar:
+    - id: wsl
+      title: "WSL"
+      style: "floating"
+      collapse-level: 2
+      align: left
+      contents:
+#        - docs/get-started/index.qmd
+        - text: "Tutorial: Hello, Quarto"
+          href: docs/get-started/hello/
+        - text: "Tutorial: Computations"
+          href: docs/get-started/computations/
+        - text: "Tutorial: Authoring"
+          href: docs/get-started/authoring/
 
 format:
   html:

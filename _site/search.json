@@ -2,36 +2,22 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Grandez",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "Informatico en excedencia"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "wsl",
+    "objectID": "docs/poc/poc.html",
+    "href": "docs/poc/poc.html",
+    "title": "Untitled",
     "section": "",
-    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Prueba de concepto\n\n\nY aqui va la informacion"
   },
   {
     "objectID": "wsl.html",
     "href": "wsl.html",
     "title": "Grandez",
     "section": "",
-    "text": "Aqui la introduccion"
-  },
-  {
-    "objectID": "wsl.html#intro-33",
-    "href": "wsl.html#intro-33",
-    "title": "Grandez",
-    "section": "Intro 33",
-    "text": "Intro 33\ndocumento con la introduccion"
-  },
-  {
-    "objectID": "wsl.html#windows-1",
-    "href": "wsl.html#windows-1",
-    "title": "Grandez",
-    "section": "Windows 1",
-    "text": "Windows 1\nAqui los datos para windows"
+    "text": "Aqui la introduccion\n\n\ndocumento con la introduccion\n\n\n\nAqui los datos para windows\n\n\n\n\n\n\n\nLogicamente, tener habilitado El subsistema Linux de Windows\n\n\n\n{fig-align=“left”, width=150}\nPara las aplicacions gráficas necesitaremos un servidor X, el cual a su vez necesita una GPU virtual. Esta GPU es dependiente del procesador por lo que hay que instalar la correspondiente a cada uno\n\nIntel\nAMD\nNVidia\nVirtual X Server\n\n\n\n\n\n\n\nPor ultimo, obtendremos el conjunto de scripts y utilidades que nos ayudarán a hacer las tareas mas automáticas y repetibles.\nPara ello, y asumiendo la estructura organizativa propuesta, nos posicionaremos en el directorio compartido: M:\\shared y nos descargaremos estas utilidades de github:\n\nHTTPS: https://github.com/Grandez/wsl_tools.git\nSSL: git@github.com:Grandez/wsl_tools.git\nCLI: gh repo clone Grandez/wsl_tools"
   }
 ]

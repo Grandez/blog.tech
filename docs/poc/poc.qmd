@@ -1,0 +1,10 @@
+---
+title: "Untitled"
+---
+
+El entorno que vamos a crear se describe en el siguiente diagrama:
+
+![Prueba de concepto](poc_001.png){style="float:left;" fig-alt="Prueba de concepto" width="401"}
+
+
+Y aqui va la informacion

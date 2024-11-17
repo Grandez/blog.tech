@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>wsl_windows</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="_wsl_windows_files/libs/clipboard/clipboard.min.js"></script>
+<script src="_wsl_windows_files/libs/quarto-html/quarto.js"></script>
+<script src="_wsl_windows_files/libs/quarto-html/popper.min.js"></script>
+<script src="_wsl_windows_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="_wsl_windows_files/libs/quarto-html/anchor.min.js"></script>
+<link href="_wsl_windows_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="_wsl_windows_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="_wsl_windows_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="_wsl_windows_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="_wsl_windows_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="windows-1" class="level2">
+<h2 class="anchored" data-anchor-id="windows-1">Windows 1</h2>
+<p>Aqui los datos para windows</p>
+<section id="estructura-host" class="level3">
+<h3 class="anchored" data-anchor-id="estructura-host">Estructura Host</h3>
+</section>
+<section id="prerequisitos" class="level3">
+<h3 class="anchored" data-anchor-id="prerequisitos">Prerequisitos</h3>
+<section id="wsl" class="level4">
+<h4 class="anchored" data-anchor-id="wsl">WSL</h4>
+<p>Logicamente, tener habilitado El subsistema Linux de Windows</p>
+</section>
+<section id="una-gpu-virtual" class="level4">
+<h4 class="anchored" data-anchor-id="una-gpu-virtual">Una GPU virtual</h4>
+<div class="img-float">
+<p><img src="graphics_001.jpg" class="img-fluid" style="float: left; width=75"></p>
+<p>Para las aplicacions gráficas necesitaremos un servidor X, el cual a su vez necesita una GPU virtual. Esta GPU es dependiente del procesador por lo que hay que instalar la correspondiente a cada uno</p>
+<ul>
+<li><a href="https://www.intel.com/content/www/us/en/download/19344/intel-graphics-windows-dch-drivers.html">Intel</a></li>
+<li><a href="https://www.amd.com/en/support">AMD</a></li>
+<li><a href="https://www.nvidia.com/Download/index.aspx?lang=en-us">NVidia</a></li>
+<li><a href="https://vcxsrv.com/">Virtual X Server</a></li>
+</ul>
+</div>
+</section>
+<section id="estructura" class="level4">
+<h4 class="anchored" data-anchor-id="estructura">Estructura</h4>
+</section>
+<section id="scripts-y-utilidades" class="level4">
+<h4 class="anchored" data-anchor-id="scripts-y-utilidades">Scripts y utilidades</h4>
+<p>Por ultimo, obtendremos el conjunto de scripts y utilidades que nos ayudarán a hacer las tareas mas automáticas y repetibles.</p>
+<p>Para ello, y asumiendo la estructura organizativa propuesta, nos posicionaremos en el directorio compartido: <code>M:\shared</code> y nos descargaremos estas utilidades de github:</p>
+<ul>
+<li><em>HTTPS</em>: <code>https://github.com/Grandez/wsl_tools.git</code></li>
+<li><em>SSL</em>: <code>git@github.com:Grandez/wsl_tools.git</code></li>
+<li><em>CLI</em>: <code>gh repo clone Grandez/wsl_tools</code></li>
+</ul>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
