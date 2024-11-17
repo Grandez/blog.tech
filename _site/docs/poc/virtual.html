@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>poc – Las ciegas hormigas electricas (2)</title>
+<title>virtual – Las ciegas hormigas electricas (2)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../docs/poc/windows.html" rel="next">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Bookdown</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/poc/virtual.html"> 
+    <a class="nav-link active" href="../../docs/poc/virtual.html" aria-current="page"> 
 <span class="menu-text">QuasiVirtual</span></a>
   </li>  
   <li class="nav-item">
@@ -117,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Poc</a></li><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Vision general</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -140,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/poc/poc.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../docs/poc/poc.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vision general</span></a>
   </div>
 </li>
@@ -171,41 +170,24 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Poc</a></li><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Vision general</a></li></ol></nav></header>
+<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section id="prueba-de-concepto" class="level1">
-<h1>Prueba de Concepto</h1>
-<p>Para los ansiosos, el objetivo es disponer en un sistema Windows :registered: un conjunto arbitrario de distros, en esta PoC todas basadas en Ubuntu, similar al siguiente diagrama:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/poc_002.png" class="img-fluid figure-img" style="width:100.0%" alt="Prueba de concepto"></p>
-<figcaption>Prueba de concepto</figcaption>
-</figure>
-</div>
-<p>Por simplicidad, y asumiendo el error de concepto, a las diferentes instancias o distros de WSL las llamaremos en adelante <em>maquinas</em></p>
+<p>En esta sección intentaremos montar un entorno de desarrollo local y departamental para trabajar en entornos virtuales.</p>
+<p>Con un único matiz: <strong>No se van a utilizar máquinas virtuales</strong></p>
+<p>¿Es el entorno mas correcto? Pues la verdad es que no, pero viene a demostrar el paradigma de que para cualquier posible problema siempre existen varias (cinco mínimo) soluciones.</p>
+<p>Mas concretamente en esta <em>Prueba de Concepto</em> trabajaremos con las siguientes herramientas:</p>
 <ul>
-<li><em>Base</em>: Es la maquina a partir de la que se genera todo el resto</li>
-<li><em>Docker</em>: Base: La maquina a partir de la cual se crean el resto de maquinas que usan Docker</li>
-<li><em>Test</em>: <em>Que deberia ser User</em>, es la maquina que el usuario utiliza para su uso personal y pruebas, su maquina por defecto</li>
-<li><em>Development</em>: Maquina para un entorno de trabajo/desarrollo concreto</li>
-<li><em>Docker</em>: Maquina que ejecuta las imagenes que se necesitan, en este PoC
-<ul>
-<li>Un servidor Web</li>
-<li>Un servidor de aplicacions</li>
-<li>Un servidor MariaDB</li>
-<li>Un servidor Oracle</li>
-<li>Otros que sean necesarios</li>
-</ul></li>
-<li><em>Registry</em>: Maquina que mantiene nuestro repositorio de imagenes Docker privadas</li>
-<li><em>Kubernetes</em>: Maquina responsable de mantener <em>minikube</em> (En local no tiene sentido kubectl)</li>
+<li>Entornos Linux en Windows</li>
+<li>Sistemas de contenirización de aplicaciones (<strong>Docker</strong>)</li>
+<li>Sistemas de gestión de cargas de trabajo (<strong>Kubernetes</strong>)</li>
+<li>Sistemas de gestión de Bases de datos: Oracle, MariaDB, etc.</li>
+<li>Sistemas Web: <em>Page servers</em>, <em>Application servers</em>, etc.</li>
 </ul>
-<p>xxxxx</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -625,15 +607,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../docs/poc/windows.html" class="pagination-link" aria-label="Windows">
-        <span class="nav-page-text">Windows</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 

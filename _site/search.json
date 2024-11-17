@@ -1,23 +1,94 @@
 [
   {
+    "objectID": "wsl.html",
+    "href": "wsl.html",
+    "title": "WSL",
+    "section": "",
+    "text": "Aqui la introduccion\n\n\ndocumento con la introduccion\n\n\n\nAqui los datos para windows\n\n\n\n\n\n\n\nLogicamente, tener habilitado El subsistema Linux de Windows\n\n\n\n\n\nPara las aplicacions gráficas necesitaremos un servidor X, el cual a su vez necesita una GPU virtual. Esta GPU es dependiente del procesador por lo que hay que instalar la correspondiente a cada uno\n\nIntel\nAMD\nNVidia\nVirtual X Server\n\n\n\n\n\n\n\n\nPor ultimo, obtendremos el conjunto de scripts y utilidades que nos ayudarán a hacer las tareas mas automáticas y repetibles.\nPara ello, y asumiendo la estructura organizativa propuesta, nos posicionaremos en el directorio compartido: M:\\shared y nos descargaremos estas utilidades de github:\n\nHTTPS: https://github.com/Grandez/wsl_tools.git\nSSL: git@github.com:Grandez/wsl_tools.git\nCLI: gh repo clone Grandez/wsl_tools"
+  },
+  {
+    "objectID": "wsl.html#intro-33",
+    "href": "wsl.html#intro-33",
+    "title": "WSL",
+    "section": "",
+    "text": "documento con la introduccion"
+  },
+  {
+    "objectID": "wsl.html#windows-1",
+    "href": "wsl.html#windows-1",
+    "title": "WSL",
+    "section": "",
+    "text": "Aqui los datos para windows\n\n\n\n\n\n\n\nLogicamente, tener habilitado El subsistema Linux de Windows\n\n\n\n\n\nPara las aplicacions gráficas necesitaremos un servidor X, el cual a su vez necesita una GPU virtual. Esta GPU es dependiente del procesador por lo que hay que instalar la correspondiente a cada uno\n\nIntel\nAMD\nNVidia\nVirtual X Server\n\n\n\n\n\n\n\n\nPor ultimo, obtendremos el conjunto de scripts y utilidades que nos ayudarán a hacer las tareas mas automáticas y repetibles.\nPara ello, y asumiendo la estructura organizativa propuesta, nos posicionaremos en el directorio compartido: M:\\shared y nos descargaremos estas utilidades de github:\n\nHTTPS: https://github.com/Grandez/wsl_tools.git\nSSL: git@github.com:Grandez/wsl_tools.git\nCLI: gh repo clone Grandez/wsl_tools"
+  },
+  {
+    "objectID": "docs/quarto/quarto.html",
+    "href": "docs/quarto/quarto.html",
+    "title": "Quarto",
+    "section": "",
+    "text": "Aqui las cositas de quarto"
+  },
+  {
+    "objectID": "docs/poc/virtual.html",
+    "href": "docs/poc/virtual.html",
+    "title": "Las ciegas hormigas electricas (2)",
+    "section": "",
+    "text": "En esta sección intentaremos montar un entorno de desarrollo local y departamental para trabajar en entornos virtuales.\nCon un único matiz: No se van a utilizar máquinas virtuales\n¿Es el entorno mas correcto? Pues la verdad es que no, pero viene a demostrar el paradigma de que para cualquier posible problema siempre existen varias (cinco mínimo) soluciones.\nMas concretamente en esta Prueba de Concepto trabajaremos con las siguientes herramientas:\n\nEntornos Linux en Windows\nSistemas de contenirización de aplicaciones (Docker)\nSistemas de gestión de cargas de trabajo (Kubernetes)\nSistemas de gestión de Bases de datos: Oracle, MariaDB, etc.\nSistemas Web: Page servers, Application servers, etc."
+  },
+  {
+    "objectID": "docs/bookdown/bookdown.html",
+    "href": "docs/bookdown/bookdown.html",
+    "title": "Las ciegas hormigas electricas (2)",
+    "section": "",
+    "text": "Aqui las cositas de bookdown, como escribir libros, diferencias entre manuales, ensayos, etc.\nPero que perezón"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "Grandez",
+    "title": "Las ciegas hormigas electricas (2)",
     "section": "",
-    "text": "Informatico en excedencia"
+    "text": "Informatico (o asi) en excedencia"
   },
   {
     "objectID": "docs/poc/poc.html",
     "href": "docs/poc/poc.html",
-    "title": "Untitled",
+    "title": "Prueba de Concepto",
     "section": "",
-    "text": "Prueba de concepto\n\n\nY aqui va la informacion"
+    "text": "Prueba de Concepto\nPara los ansiosos, el objetivo es disponer en un sistema Windows :registered: un conjunto arbitrario de distros, en esta PoC todas basadas en Ubuntu, similar al siguiente diagrama:\n\n\n\nPrueba de concepto\n\n\nPor simplicidad, y asumiendo el error de concepto, a las diferentes instancias o distros de WSL las llamaremos en adelante maquinas\n\nBase: Es la maquina a partir de la que se genera todo el resto\nDocker: Base: La maquina a partir de la cual se crean el resto de maquinas que usan Docker\nTest: Que deberia ser User, es la maquina que el usuario utiliza para su uso personal y pruebas, su maquina por defecto\nDevelopment: Maquina para un entorno de trabajo/desarrollo concreto\nDocker: Maquina que ejecuta las imagenes que se necesitan, en este PoC\n\nUn servidor Web\nUn servidor de aplicacions\nUn servidor MariaDB\nUn servidor Oracle\nOtros que sean necesarios\n\nRegistry: Maquina que mantiene nuestro repositorio de imagenes Docker privadas\nKubernetes: Maquina responsable de mantener minikube (En local no tiene sentido kubectl)\n\nxxxxx",
+    "crumbs": [
+      "Home",
+      "Poc",
+      "Vision general"
+    ]
   },
   {
-    "objectID": "wsl.html",
-    "href": "wsl.html",
-    "title": "Grandez",
+    "objectID": "docs/poc/windows.html",
+    "href": "docs/poc/windows.html",
+    "title": "Las ciegas hormigas electricas (2)",
     "section": "",
-    "text": "Aqui la introduccion\n\n\ndocumento con la introduccion\n\n\n\nAqui los datos para windows\n\n\n\n\n\n\n\nLogicamente, tener habilitado El subsistema Linux de Windows\n\n\n\n\n\nPara las aplicacions gráficas necesitaremos un servidor X, el cual a su vez necesita una GPU virtual. Esta GPU es dependiente del procesador por lo que hay que instalar la correspondiente a cada uno\n\nIntel\nAMD\nNVidia\nVirtual X Server\n\n\n\n\n\n\n\n\nPor ultimo, obtendremos el conjunto de scripts y utilidades que nos ayudarán a hacer las tareas mas automáticas y repetibles.\nPara ello, y asumiendo la estructura organizativa propuesta, nos posicionaremos en el directorio compartido: M:\\shared y nos descargaremos estas utilidades de github:\n\nHTTPS: https://github.com/Grandez/wsl_tools.git\nSSL: git@github.com:Grandez/wsl_tools.git\nCLI: gh repo clone Grandez/wsl_tools"
+    "text": "Aqui la parte de windows",
+    "crumbs": [
+      "Home",
+      "Poc",
+      "Windows"
+    ]
+  },
+  {
+    "objectID": "docs/poc/windows.html#discos-virtuales",
+    "href": "docs/poc/windows.html#discos-virtuales",
+    "title": "Las ciegas hormigas electricas (2)",
+    "section": "Discos virtuales",
+    "text": "Discos virtuales\nBasicamente hay dos formas de crear discos virtuales:\n\nVia registro\nComando SUBST\n\n\nRegistro\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\DOS Devices]\n\"M:\"=\"\\\\??\\\\C:\\\\Users\\\\my_user\\\\Documents\\\\Machines\"\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\DriveIcons]\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\DriveIcons\\M]\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\DriveIcons\\M\\DefaultLabel]\n@=\"Maquinas\"\n\n\nSUBST\nEl comando SUBST es de sobra conocido:\nsubst [&lt;drive1&gt;: [&lt;drive2&gt;:]&lt;path&gt;]\nEl problema de este es que se pierde cada vez que se cierra la sesion. Para evitar esto una pequeña receta es …. ¡El scheduler de Windows!",
+    "crumbs": [
+      "Home",
+      "Poc",
+      "Windows"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Las ciegas hormigas electricas",
+    "section": "",
+    "text": "Las ciegas hormigas electricas\nExtracto del portal “Las ciegas hormigas electricas” focalizado en las partes puramente técnicas."
   }
 ]

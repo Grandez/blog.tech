@@ -1,3 +1,13 @@
+![](images/hormigas_002.jpg){width=50% height=150px}
+![](images/hormigas_002.jpg){width=49% height=150px}
 
 # Las ciegas hormigas electricas
+
+Extracto del portal "Las ciegas hormigas electricas" focalizado en las partes puramente técnicas.
+
+
+
+
+
+
 

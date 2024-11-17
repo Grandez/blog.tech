@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>poc – Las ciegas hormigas electricas (2)</title>
+<title>windows – Las ciegas hormigas electricas (2)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../docs/poc/windows.html" rel="next">
+<link href="../../docs/poc/wsl.qmd" rel="next">
+<link href="../../docs/poc/poc.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -117,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Poc</a></li><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Vision general</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Poc</a></li><li class="breadcrumb-item"><a href="../../docs/poc/windows.html">Windows</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -140,13 +141,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/poc/poc.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../docs/poc/poc.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vision general</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/poc/windows.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/poc/windows.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Windows</span></a>
   </div>
 </li>
@@ -171,40 +172,39 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Poc</a></li><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Vision general</a></li></ol></nav></header>
+<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Poc</a></li><li class="breadcrumb-item"><a href="../../docs/poc/windows.html">Windows</a></li></ol></nav></header>
 
 
 
 
-<section id="prueba-de-concepto" class="level1">
-<h1>Prueba de Concepto</h1>
-<p>Para los ansiosos, el objetivo es disponer en un sistema Windows :registered: un conjunto arbitrario de distros, en esta PoC todas basadas en Ubuntu, similar al siguiente diagrama:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/poc_002.png" class="img-fluid figure-img" style="width:100.0%" alt="Prueba de concepto"></p>
-<figcaption>Prueba de concepto</figcaption>
-</figure>
-</div>
-<p>Por simplicidad, y asumiendo el error de concepto, a las diferentes instancias o distros de WSL las llamaremos en adelante <em>maquinas</em></p>
+<p>Aqui la parte de windows</p>
+<section id="discos-virtuales" class="level2">
+<h2 class="anchored" data-anchor-id="discos-virtuales">Discos virtuales</h2>
+<p>Basicamente hay dos formas de crear discos virtuales:</p>
 <ul>
-<li><em>Base</em>: Es la maquina a partir de la que se genera todo el resto</li>
-<li><em>Docker</em>: Base: La maquina a partir de la cual se crean el resto de maquinas que usan Docker</li>
-<li><em>Test</em>: <em>Que deberia ser User</em>, es la maquina que el usuario utiliza para su uso personal y pruebas, su maquina por defecto</li>
-<li><em>Development</em>: Maquina para un entorno de trabajo/desarrollo concreto</li>
-<li><em>Docker</em>: Maquina que ejecuta las imagenes que se necesitan, en este PoC
-<ul>
-<li>Un servidor Web</li>
-<li>Un servidor de aplicacions</li>
-<li>Un servidor MariaDB</li>
-<li>Un servidor Oracle</li>
-<li>Otros que sean necesarios</li>
-</ul></li>
-<li><em>Registry</em>: Maquina que mantiene nuestro repositorio de imagenes Docker privadas</li>
-<li><em>Kubernetes</em>: Maquina responsable de mantener <em>minikube</em> (En local no tiene sentido kubectl)</li>
+<li>Via registro</li>
+<li>Comando SUBST</li>
 </ul>
-<p>xxxxx</p>
+<section id="registro" class="level3">
+<h3 class="anchored" data-anchor-id="registro">Registro</h3>
+<pre data-code-line-numbers="true" data-eval="FALSE"><code>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\DOS Devices]
+"M:"="\\??\\C:\\Users\\my_user\\Documents\\Machines"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\M]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\M\DefaultLabel]
+@="Maquinas"</code></pre>
+</section>
+<section id="subst" class="level3">
+<h3 class="anchored" data-anchor-id="subst">SUBST</h3>
+<p>El comando SUBST es de sobra conocido:</p>
+<pre><code>subst [&lt;drive1&gt;: [&lt;drive2&gt;:]&lt;path&gt;]</code></pre>
+<p>El problema de este es que se pierde cada vez que se cierra la sesion. Para evitar esto una pequeña receta es …. ¡El scheduler de Windows!</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -627,10 +627,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
+      <a href="../../docs/poc/poc.html" class="pagination-link" aria-label="Vision general">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Vision general</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../docs/poc/windows.html" class="pagination-link" aria-label="Windows">
-        <span class="nav-page-text">Windows</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../docs/poc/wsl.qmd" class="pagination-link" aria-label="WSL">
+        <span class="nav-page-text">WSL</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

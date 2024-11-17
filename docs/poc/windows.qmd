@@ -1,0 +1,36 @@
+Aqui la parte de windows
+
+## Discos virtuales
+
+Basicamente hay dos formas de crear discos virtuales:
+
+- Via registro
+- Comando SUBST
+
+### Registro
+
+``` {code-line-numbers="true" eval=FALSE}
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\DOS Devices]
+"M:"="\\??\\C:\\Users\\my_user\\Documents\\Machines"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\M]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\M\DefaultLabel]
+@="Maquinas"
+```
+
+### SUBST
+
+El comando SUBST es de sobra conocido:
+
+```
+subst [<drive1>: [<drive2>:]<path>]
+```` 
+
+El problema de este es que se pierde cada vez que se cierra la sesion.
+Para evitar esto una pequeña receta es .... ¡El scheduler de Windows!
+
+
+

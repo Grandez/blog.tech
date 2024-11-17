@@ -1,10 +1,26 @@
----
-title: "Untitled"
----
+# Prueba de Concepto
 
-El entorno que vamos a crear se describe en el siguiente diagrama:
-
-![Prueba de concepto](poc_001.png){style="float:left;" fig-alt="Prueba de concepto" width="401"}
+Para los ansiosos, el objetivo es disponer en un sistema Windows :registered: un conjunto arbitrario de distros,
+en esta PoC todas basadas en Ubuntu, similar al siguiente diagrama:
 
 
-Y aqui va la informacion
+![Prueba de concepto](images/poc_002.png){fig-alt="Prueba de concepto" width=100%}
+
+Por simplicidad, y asumiendo el error de concepto, a las diferentes instancias o distros de WSL las llamaremos en adelante _maquinas_
+
+- *Base*: Es la maquina a partir de la que se genera todo el resto
+- *Docker*: Base: La maquina a partir de la cual se crean el resto de maquinas que usan Docker
+- *Test*: _Que deberia ser User_, es la maquina que el usuario utiliza para su uso personal y pruebas, su maquina por defecto
+- *Development*: Maquina para un entorno de trabajo/desarrollo concreto
+- *Docker*: Maquina que ejecuta las imagenes que se necesitan, en este PoC
+   - Un servidor Web
+   - Un servidor de aplicacions
+   - Un servidor MariaDB
+   - Un servidor Oracle
+   - Otros que sean necesarios
+- *Registry*: Maquina que mantiene nuestro repositorio de imagenes Docker privadas
+- *Kubernetes*: Maquina responsable de mantener *minikube* (En local no tiene sentido kubectl)
+
+xxxxx
+
+

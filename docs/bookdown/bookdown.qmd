@@ -1,0 +1,3 @@
+![Myself](images/book_001.jpg){width=250px} Aqui las cositas de bookdown, como escribir libros, diferencias entre manuales, ensayos, etc.
+
+***Pero que perezón***

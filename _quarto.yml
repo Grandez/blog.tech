@@ -2,48 +2,55 @@ project:
   type: website
 
 website:
-  title: "Grandez"
+  title: "Las ciegas hormigas electricas (2)"
+  page-navigation: true
   navbar:
     background: light
     logo: images/buho.png
     logo-alt: "Serendipias"
     title: false
     collapse-below: lg  
-    search: true
+    search: false
     left:
       - href: index.qmd
         text: Home
-      - href: wsl.qmd
-        text: WSL
-      - href: docs/poc/poc.qmd
-        text: Poc
+      - href: docs/quarto/quarto.qmd
+        text: Quarto
+      - href: docs/bookdown/bookdown.qmd
+        text: Bookdown
+      - href: docs/poc/virtual.qmd
+        text: QuasiVirtual
       - href: about.qmd
         text: About
   sidebar:
-    - id: wsl
+    - id: poc
       title: "WSL"
-      style: "floating"
+      style: "docked"
+      pinned: true
       collapse-level: 2
       align: left
       contents:
-#        - docs/get-started/index.qmd
-        - text: "Tutorial: Hello, Quarto"
-          href: docs/get-started/hello/
-        - text: "Tutorial: Computations"
-          href: docs/get-started/computations/
-        - text: "Tutorial: Authoring"
-          href: docs/get-started/authoring/
+        - section: "Poc"
+          contents:
+            - text: "Vision general"
+              href: docs/poc/poc.qmd
+            - text: "Windows"
+              href: docs/poc/windows.qmd
+            - text: "WSL"
+              href: docs/poc/wsl.qmd
+            - text: "Tutorial: Authoring"
+              href: docs/get-started/authoring/
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
-    toc: true
+    toc: false
     page-layout: full
+    code-line-numbers: true
     grid:
       sidebar-width: 150px
       body-width: 1200px
       margin-width: 150px
       gutter-width: 1.5rem
+      
 editor: source
 

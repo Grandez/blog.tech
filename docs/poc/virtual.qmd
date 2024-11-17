@@ -1,0 +1,14 @@
+En esta sección intentaremos montar un entorno de desarrollo local y departamental para trabajar en entornos virtuales.
+
+Con un único matiz: **No se van a utilizar máquinas virtuales**
+
+¿Es el entorno mas correcto? Pues la verdad es que no, pero viene a demostrar el paradigma de que para cualquier posible
+problema siempre existen varias (cinco mínimo) soluciones.
+
+Mas concretamente en esta _Prueba de Concepto_ trabajaremos con las siguientes herramientas:
+
+- Entornos Linux en Windows
+- Sistemas de contenirización de aplicaciones (**Docker**)
+- Sistemas de gestión de cargas de trabajo (**Kubernetes**)
+- Sistemas de gestión de Bases de datos: Oracle, MariaDB, etc.
+- Sistemas Web: _Page servers_, _Application servers_, etc.

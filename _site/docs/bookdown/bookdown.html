@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>poc – Las ciegas hormigas electricas (2)</title>
+<title>bookdown – Las ciegas hormigas electricas (2)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../docs/poc/windows.html" rel="next">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -95,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Quarto</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/bookdown/bookdown.html"> 
+    <a class="nav-link active" href="../../docs/bookdown/bookdown.html" aria-current="page"> 
 <span class="menu-text">Bookdown</span></a>
   </li>  
   <li class="nav-item">
@@ -112,100 +111,22 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Poc</a></li><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Vision general</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Poc</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/poc/poc.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Vision general</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/poc/windows.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Windows</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/poc/wsl.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">WSL</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/get-started/authoring/" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tutorial: Authoring</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Poc</a></li><li class="breadcrumb-item"><a href="../../docs/poc/poc.html">Vision general</a></li></ol></nav></header>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<section id="prueba-de-concepto" class="level1">
-<h1>Prueba de Concepto</h1>
-<p>Para los ansiosos, el objetivo es disponer en un sistema Windows :registered: un conjunto arbitrario de distros, en esta PoC todas basadas en Ubuntu, similar al siguiente diagrama:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/poc_002.png" class="img-fluid figure-img" style="width:100.0%" alt="Prueba de concepto"></p>
-<figcaption>Prueba de concepto</figcaption>
-</figure>
-</div>
-<p>Por simplicidad, y asumiendo el error de concepto, a las diferentes instancias o distros de WSL las llamaremos en adelante <em>maquinas</em></p>
-<ul>
-<li><em>Base</em>: Es la maquina a partir de la que se genera todo el resto</li>
-<li><em>Docker</em>: Base: La maquina a partir de la cual se crean el resto de maquinas que usan Docker</li>
-<li><em>Test</em>: <em>Que deberia ser User</em>, es la maquina que el usuario utiliza para su uso personal y pruebas, su maquina por defecto</li>
-<li><em>Development</em>: Maquina para un entorno de trabajo/desarrollo concreto</li>
-<li><em>Docker</em>: Maquina que ejecuta las imagenes que se necesitan, en este PoC
-<ul>
-<li>Un servidor Web</li>
-<li>Un servidor de aplicacions</li>
-<li>Un servidor MariaDB</li>
-<li>Un servidor Oracle</li>
-<li>Otros que sean necesarios</li>
-</ul></li>
-<li><em>Registry</em>: Maquina que mantiene nuestro repositorio de imagenes Docker privadas</li>
-<li><em>Kubernetes</em>: Maquina responsable de mantener <em>minikube</em> (En local no tiene sentido kubectl)</li>
-</ul>
-<p>xxxxx</p>
+<p><img src="images/book_001.jpg" class="img-fluid" width="250" alt="Myself"> Aqui las cositas de bookdown, como escribir libros, diferencias entre manuales, ensayos, etc.</p>
+<p><strong><em>Pero que perezón</em></strong></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -625,15 +546,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../docs/poc/windows.html" class="pagination-link" aria-label="Windows">
-        <span class="nav-page-text">Windows</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
